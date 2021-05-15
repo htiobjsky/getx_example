@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_example/src/pages/normal/first.dart';
+import 'package:getx_example/src/pages/simple_state_manage.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -39,6 +40,12 @@ class Home extends StatelessWidget {
               child: Text("dynamic url"),
               onPressed: () {
                 Get.toNamed("/user/233?name=범준&age=22");
+              },
+            ),
+            RaisedButton(
+              child: Text("단순 상태 관리"),
+              onPressed: () {
+                Get.to(SimpleStateManagePage());
               },
             )
           ],
