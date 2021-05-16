@@ -61,7 +61,13 @@ class Home extends StatelessWidget {
               onPressed: () {
                 Get.to(DependencyManagePage());
               },
-            )
+            ),
+            RaisedButton(
+              child: Text("Binding 관리"),
+              onPressed: () {
+                Get.toNamed("/binding");
+              },
+            ),
           ],
         ),
       ),
