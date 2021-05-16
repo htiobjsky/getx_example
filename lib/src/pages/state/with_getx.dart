@@ -20,15 +20,23 @@ class WithGetX extends StatelessWidget {
               builder: (controller) {
                 return Text(controller.count.toString(), style: TextStyle(fontSize: 50),);
               },),
+          GetBuilder<CountControllerWithGetX>(
+            builder: (controller) {
+              return Text(controller.count.toString(), style: TextStyle(fontSize: 50),);
+            },),
           _button("first"),
           _button("second"),
+          ElevatedButton(onPressed: (){
+         Get.find<CountControllerWithGetX>().putNumber(5);
+          },child: Text("5로 변경", style: TextStyle(fontSize: 30),)),
+
         ],
       ),
     );
   }
 
   Widget _button(String id) {
-    return RaisedButton(onPressed: (){
+    return ElevatedButton(onPressed: (){
       Get.find<CountControllerWithGetX>().increase(id);
     },child: Text("+", style: TextStyle(fontSize: 30),));
   }
