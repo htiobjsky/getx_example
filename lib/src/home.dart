@@ -4,6 +4,7 @@ import 'package:getx_example/src/pages/dependences/dependency_manage_page.dart';
 import 'package:getx_example/src/pages/normal/first.dart';
 import 'package:getx_example/src/pages/reactive_state_manage.dart';
 import 'package:getx_example/src/pages/simple_state_manage.dart';
+import 'package:getx_example/src/pages/sliver_page.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -66,6 +67,12 @@ class Home extends StatelessWidget {
               child: Text("Binding 관리"),
               onPressed: () {
                 Get.toNamed("/binding");
+              },
+            ),
+            RaisedButton(
+              child: Text("Sliver Example"),
+              onPressed: () {
+                Get.to(SliverPage());
               },
             ),
           ],
