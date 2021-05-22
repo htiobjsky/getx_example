@@ -55,7 +55,7 @@ class SliverPage extends StatelessWidget {
   renderSliverAppbar() {
     return SliverAppBar(
       expandedHeight: 250,
-      //pinned: true,
+      pinned: true,
       floating: true,
       flexibleSpace: Image.network(
         "https://yt3.ggpht.com/ytc/AAUvwnhXW_AiWCgbztaGTQWkpH56AHFhovdMzREKFYHs=s176-c-k-c0x00ffffff-no-rj",
